@@ -157,6 +157,7 @@ router.post('/take', ctx => {
     } else {
       let obj = spaces[index];
       obj.status = statuses[1];
+      obj.count +=1;
       ctx.response.body = obj;
       ctx.response.status = 200;
     }
